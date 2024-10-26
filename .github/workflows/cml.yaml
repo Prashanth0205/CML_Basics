@@ -4,6 +4,9 @@ jobs:
   train-and-report:
     runs-on: ubuntu-latest
     container: docker://ghcr.io/iterative/cml:0-dvc2-base1
+    permissions:
+      contents: write  
+      issues: write 
     steps:
       - uses: actions/checkout@v3
         with:
